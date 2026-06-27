@@ -4,6 +4,7 @@ const btn = document.querySelector("button");
 const values = [
   "a",
   "b",
+  "c",
   "d",
   "e",
   "f",
@@ -18,7 +19,7 @@ const values = [
   "9",
 ];
 
-function getGradinent() {
+function getGradient() {
   let color = "#";
   for (let i = 0; i < 6; i++) {
     const randomNumber = Math.trunc(Math.random() * values.length);
@@ -26,18 +27,20 @@ function getGradinent() {
   }
   return color;
 }
-
-getGradinent();
+getGradient();
 
 function setGradient() {
-  const color1 = getGradinent();
-  const color2 = getGradinent();
+  const color1 = getGradient();
+  const color2 = getGradient();
   const randomDeg = Math.trunc(Math.random() * 360);
   const bgColor = `linear-gradient(
   ${randomDeg}deg,
-  ${color1}
+  ${color1},
   ${color2}
   )`;
   body.style.background = bgColor;
 }
-setGradient();
+
+btn.addEventListener("mousedown", () => {
+  setGradient();
+});

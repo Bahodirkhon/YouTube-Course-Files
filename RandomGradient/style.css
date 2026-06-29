@@ -30,10 +30,10 @@ button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  background-color: rgb(198, 195, 195);
+  background-color: rgb(213, 213, 213);
   transition: all 0.4s ease;
 }
 
 button:hover {
-  background-color: rgb(158, 156, 156);
+  background-color: rgb(175, 175, 175);
 }

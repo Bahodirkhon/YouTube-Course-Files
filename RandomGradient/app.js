@@ -37,10 +37,14 @@ function setGradient() {
   ${randomDeg}deg,
   ${color1},
   ${color2}
-  )`;
+)`;
   body.style.background = bgColor;
 }
 
-btn.addEventListener("mousedown", () => {
+btn.addEventListener("click", () => {
+  setGradient();
+});
+
+document.addEventListener("dblclick", () => {
   setGradient();
 });
